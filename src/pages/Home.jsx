@@ -10,7 +10,7 @@ import Card from "../components/Card.jsx";
  *  Put these files in: public/images/
  *  hero1.jpg, hero2.jpg, hero3.jpg  (1920x1080 or similar)
  *  =========================== */
-const SLIDE_MS = 6000;
+const SLIDE_MS = 2000;
 
 const slides = [
   {
