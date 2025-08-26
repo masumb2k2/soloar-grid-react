@@ -19,7 +19,8 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={() => setEnabled(!enabled)}
-      className="btn btn-outline h-10 px-3 rounded-full"
+      className={`btn h-10 w-10 rounded-full transition-colors duration-300 ease-in-out 
+        ${enabled ? 'bg-secondary text-white hover:bg-secondary/80' : 'bg-primary text-white hover:bg-primary/80'}`}
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
     >

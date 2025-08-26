@@ -1,11 +1,10 @@
-// src/components/Footer.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-    <footer className="bg-indigo-600 text-white py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="container-g grid gap-8 md:grid-cols-3">
         {/* Company Info */}
         <div>
@@ -25,7 +24,7 @@ export default function Footer() {
                 href="https://www.facebook.com/SolarGridPower"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-indigo-400"
+                className="text-white hover:text-secondary"
               >
                 <FaFacebook />
               </a>
@@ -33,7 +32,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/solarggridpower"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-indigo-400"
+                className="text-white hover:text-secondary"
               >
                 <FaLinkedin />
               </a>
@@ -41,7 +40,7 @@ export default function Footer() {
                 href="https://twitter.com/SolarGridPower"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-indigo-400"
+                className="text-white hover:text-secondary"
               >
                 <FaTwitter />
               </a>
@@ -49,7 +48,7 @@ export default function Footer() {
                 href="https://www.instagram.com/solarggridpower"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-indigo-400"
+                className="text-white hover:text-secondary"
               >
                 <FaInstagram />
               </a>
@@ -59,28 +58,28 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-bold mb-3">Quick Links</h4>
+          <h4 className="font-bold mb-3 text-white">Quick Links</h4>
           <ul className="grid gap-2 text-sm">
-            <li><Link to="/about" className="hover:underline">About Us</Link></li>
-            <li><Link to="/products" className="hover:underline">Products/Services</Link></li>
-            <li><Link to="/projects" className="hover:underline">Projects</Link></li>
-            <li><Link to="/careers" className="hover:underline">Careers</Link></li>
+            <li><Link to="/about" className="hover:underline text-white hover:text-secondary">About Us</Link></li>
+            <li><Link to="/products" className="hover:underline text-white hover:text-secondary">Products/Services</Link></li>
+            <li><Link to="/projects" className="hover:underline text-white hover:text-secondary">Projects</Link></li>
+            <li><Link to="/careers" className="hover:underline text-white hover:text-secondary">Careers</Link></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h4 className="font-bold mb-3">Contact</h4>
+          <h4 className="font-bold mb-3 text-white">Contact</h4>
           <ul className="grid gap-2 text-sm">
             <li>House 123, Road 45, Dhaka, Bangladesh</li>
             <li>+880 1234-567890</li>
-            <li><a href="mailto:info@soloargridpower.com" className="hover:underline">info@soloargridpower.com</a></li>
+            <li><a href="mailto:info@soloargridpower.com" className="hover:underline text-white hover:text-secondary">info@soloargridpower.com</a></li>
           </ul>
         </div>
       </div>
 
       {/* Copyright */}
-      <div className="bg-indigo-700 py-4 text-center text-sm text-slate-300">
+      <div className="bg-primary dark:bg-secondary py-4 text-center text-sm text-slate-300">
         <p>© 2025 SolarGrid Power Ltd. All rights reserved.</p>
       </div>
     </footer>

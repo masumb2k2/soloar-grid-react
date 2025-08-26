@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
@@ -126,13 +125,13 @@ function AutoSlider() {
       <div className="relative z-10 h-full">
         <div className="container-g h-full flex items-end md:items-center pb-10 md:pb-0">
           <motion.div key={`txt-${current.id}`} {...fadeUp} className="max-w-3xl text-white">
-            <p className="uppercase tracking-wide text-indigo-200/95 text-sm font-semibold">
+            <p className="uppercase tracking-wide text-primary text-sm font-semibold">
               {current.eyebrow}
             </p>
             <h1 className="text-3xl sm:text-5xl font-extrabold mt-1 leading-tight">
               {current.title}
             </h1>
-            <p className="mt-3 text-indigo-100/95 text-lg">{current.subtitle}</p>
+            <p className="mt-3 text-primary/95 text-lg">{current.subtitle}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to={current.ctaTo}>
                 <Button className="shadow-soft">{current.ctaLabel}</Button>
@@ -200,10 +199,10 @@ export default function Home() {
       {/* ===== 1) SLIDER ===== */}
       <AutoSlider />
 
-      {/* ===== 2) WELCOME / INTRO (like reference intro) ===== */}
+      {/* ===== 2) WELCOME / INTRO ===== */}
       <section className="section">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">
             Welcome to SolarGrid Power Ltd. — Electricity Power Solutions in Bangladesh
           </motion.h2>
           <motion.p
@@ -223,7 +222,7 @@ export default function Home() {
       {/* ===== 3) FEATURED SOLUTIONS (like “Our Products”) ===== */}
       <section className="section bg-slate-50 dark:bg-slate-800/40">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">
             Featured Solar Solutions
           </motion.h2>
 
@@ -243,12 +242,12 @@ export default function Home() {
               <motion.div key={item.title} variants={cardChild}>
                 <motion.div whileHover={{ y: -6, scale: 1.02 }} className="card relative overflow-hidden group">
                   <div className="text-3xl">{item.emoji}</div>
-                  <h3 className="text-xl font-bold text-indigo-600 mt-2">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-primary mt-2">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed">{item.text}</p>
                   <div className="mt-4">
-                    <Link to="/products" className="text-indigo-600 font-semibold hover:underline">Learn more →</Link>
+                    <Link to="/products" className="text-primary font-semibold hover:underline">Learn more →</Link>
                   </div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/10 group-hover:to-indigo-500/20 transition-colors" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/20 transition-colors" />
                 </motion.div>
               </motion.div>
             ))}
@@ -256,10 +255,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 4) SERVICES & SOLUTIONS (like reference) ===== */}
+      {/* ===== 4) SERVICES & SOLUTIONS ===== */}
       <section className="section">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">Service &amp; Solution</motion.h2>
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">Service &amp; Solution</motion.h2>
           <motion.div
             variants={staggerParent}
             initial="initial"
@@ -277,7 +276,7 @@ export default function Home() {
             ].map(([title, text]) => (
               <motion.div key={title} variants={cardChild}>
                 <motion.div whileHover={{ y: -6 }} className="card h-full">
-                  <h3 className="text-lg font-bold text-indigo-600">{title}</h3>
+                  <h3 className="text-lg font-bold text-primary">{title}</h3>
                   <p className="mt-1 text-sm">{text}</p>
                 </motion.div>
               </motion.div>
@@ -289,7 +288,7 @@ export default function Home() {
       {/* ===== 5) AT A GLANCE / CORE VALUES ===== */}
       <section className="section bg-slate-50 dark:bg-slate-800/40">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">SolarGrid at a Glance</motion.h2>
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">SolarGrid at a Glance</motion.h2>
           <motion.ul
             variants={staggerParent}
             initial="initial"
@@ -304,7 +303,7 @@ export default function Home() {
               "Transparent proposals with yield & payback models.",
               "Rapid support with local teams and defined SLAs.",
             ].map((text, i) => (
-              <motion.li key={i} variants={cardChild} className="card">{text}</motion.li>
+              <motion.li key={i} variants={cardChild} className="card text-primary">{text}</motion.li>
             ))}
           </motion.ul>
           <div className="mt-6 text-center">
@@ -313,10 +312,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 6) LEADERSHIP (like reference) ===== */}
+      {/* ===== 6) LEADERSHIP ===== */}
       <section className="section">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">Our Leadership</motion.h2>
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">Our Leadership</motion.h2>
           <motion.div
             variants={staggerParent}
             initial="initial"
@@ -335,7 +334,7 @@ export default function Home() {
                   {img && <img src={img} alt={name} className="h-full w-full object-cover" />}
                 </div>
                 <div className="mt-3">
-                  <h3 className="text-lg font-bold">{name}</h3>
+                  <h3 className="text-lg font-bold text-primary">{name}</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300">{role}</p>
                 </div>
               </motion.article>
@@ -350,7 +349,7 @@ export default function Home() {
       {/* ===== 7) CLIENTS & AFFILIATIONS / CERTIFICATIONS ===== */}
       <section className="section bg-slate-50 dark:bg-slate-800/40">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">Clients &amp; Affiliations</motion.h2>
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">Clients &amp; Affiliations</motion.h2>
 
           {/* Clients (logo grid) */}
           <motion.div {...staggerParent} className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -364,7 +363,7 @@ export default function Home() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {/* Certifications */}
             <div>
-              <h3 className="text-xl font-bold text-indigo-600">Certifications</h3>
+              <h3 className="text-xl font-bold text-primary">Certifications</h3>
               <div className="mt-4 grid grid-cols-3 gap-3">
                 {["cert1.png","cert2.png","cert3.png"].map((f,i)=>(
                   <div key={i} className="card flex items-center justify-center py-6">
@@ -373,13 +372,13 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-4">
-                <Link to="/about" className="text-indigo-600 font-semibold hover:underline">All Certificates →</Link>
+                <Link to="/about" className="text-primary font-semibold hover:underline">All Certificates →</Link>
               </div>
             </div>
 
             {/* Affiliations */}
             <div>
-              <h3 className="text-xl font-bold text-indigo-600">Affiliations</h3>
+              <h3 className="text-xl font-bold text-primary">Affiliations</h3>
               <div className="mt-4 grid grid-cols-3 gap-3">
                 {["aff1.png","aff2.png","aff3.png"].map((f,i)=>(
                   <div key={i} className="card flex items-center justify-center py-6">
@@ -388,7 +387,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-4">
-                <Link to="/about" className="text-indigo-600 font-semibold hover:underline">Our Affiliations →</Link>
+                <Link to="/about" className="text-primary font-semibold hover:underline">Our Affiliations →</Link>
               </div>
             </div>
           </div>
@@ -398,7 +397,7 @@ export default function Home() {
       {/* ===== 8) EVENTS / NEWS ===== */}
       <section className="section">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">Events &amp; News</motion.h2>
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">Events &amp; News</motion.h2>
           <motion.div
             variants={staggerParent}
             initial="initial"
@@ -415,11 +414,11 @@ export default function Home() {
                   {img && <img src={img} alt={title} className="h-full w-full object-cover" />}
                 </div>
                 <div className="mt-3">
-                  <h3 className="text-lg font-bold">{title}</h3>
+                  <h3 className="text-lg font-bold text-primary">{title}</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300">{date}</p>
                 </div>
                 <div className="mt-3">
-                  <Link to="/blog" className="text-indigo-600 font-semibold hover:underline">Check Events →</Link>
+                  <Link to="/blog" className="text-primary font-semibold hover:underline">Check Events →</Link>
                 </div>
               </motion.article>
             ))}
@@ -435,17 +434,17 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="card relative bg-gradient-to-br from-indigo-600 to-indigo-500 text-white"
+            className="card relative bg-gradient-to-br from-primary to-primary/90 text-white"
           >
             <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-white/10 blur-2xl" />
             <div className="absolute -left-8 -bottom-8 w-40 h-40 rounded-full bg-white/10 blur-2xl" />
             <h3 className="text-2xl md:text-3xl font-extrabold">Start Your Solar Journey Today</h3>
-            <p className="mt-2 text-indigo-100">
+            <p className="mt-2 text-primary/90">
               Talk to our engineers about on‑grid, off‑grid, hybrid, or service station projects.
             </p>
             <div className="mt-4">
               <Link to="/contact">
-                <Button className="bg-white text-indigo-700 hover:bg-indigo-50">Contact Us Now</Button>
+                <Button className="bg-white text-primary hover:bg-indigo-50">Contact Us Now</Button>
               </Link>
             </div>
           </motion.div>

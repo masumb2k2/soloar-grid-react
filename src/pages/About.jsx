@@ -9,11 +9,13 @@ const fadeIn = {
   viewport: { once: true, amount: 0.2 },
   transition: { duration: 0.6 },
 };
+
 const staggerParent = {
   initial: {},
   whileInView: { transition: { staggerChildren: 0.12 } },
   viewport: { once: true, amount: 0.2 },
 };
+
 const cardChild = {
   initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
@@ -27,7 +29,7 @@ export default function About() {
       {/* ===== HEADER / INTRO ===== */}
       <section className="section">
         <div className="container-g">
-          <motion.h1 {...fadeIn} className="h1 text-center">
+          <motion.h1 {...fadeIn} className="h1 text-center text-primary">
             About SolarGrid Power Ltd.
           </motion.h1>
           <motion.p
@@ -43,9 +45,9 @@ export default function About() {
       </section>
 
       {/* ===== MISSION & VISION (card view with image) ===== */}
-      <section className="section bg-slate-50 dark:bg-slate-800/40">
+      <section className="section bg-slate-50 dark:bg-secondary/40">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">
             Mission &amp; Vision
           </motion.h2>
 
@@ -71,13 +73,13 @@ export default function About() {
                   />
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold text-indigo-600">Our Mission</h3>
+                  <h3 className="text-xl font-bold text-primary">Our Mission</h3>
                   <p className="mt-2 text-sm leading-relaxed">
                     Deliver innovative, dependable solar solutions—maximizing uptime, safety,
                     and ROI for Bangladesh’s industries and communities.
                   </p>
                 </div>
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/10 group-hover:to-indigo-500/20 transition-colors" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/20 transition-colors" />
               </motion.div>
             </motion.article>
 
@@ -97,13 +99,13 @@ export default function About() {
                   />
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-xl font-bold text-indigo-600">Our Vision</h3>
+                  <h3 className="text-xl font-bold text-primary">Our Vision</h3>
                   <p className="mt-2 text-sm leading-relaxed">
                     A cleaner national grid—where solar is accessible, bankable, and everywhere,
                     powering sustainable growth.
                   </p>
                 </div>
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/10 group-hover:to-indigo-500/20 transition-colors" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/20 transition-colors" />
               </motion.div>
             </motion.article>
           </motion.div>
@@ -113,7 +115,7 @@ export default function About() {
       {/* ===== LEADERSHIP & TEAM (4 cards with image + details) ===== */}
       <section className="section">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">
             Leadership &amp; Team
           </motion.h2>
 
@@ -142,13 +144,13 @@ export default function About() {
                     />
                   </div>
                   <div className="mt-3">
-                    <h3 className="text-lg font-bold">{m.name}</h3>
+                    <h3 className="text-lg font-bold text-primary">{m.name}</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300">{m.role}</p>
                     <p className="mt-2 text-sm">
                       10+ years in solar EPC, safety‑first leadership, and quality assurance.
                     </p>
                   </div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/10 group-hover:to-indigo-500/20 transition-colors" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/20 transition-colors" />
                 </motion.div>
               </motion.article>
             ))}
@@ -157,9 +159,9 @@ export default function About() {
       </section>
 
       {/* ===== WHY CHOOSE US (icon cards) ===== */}
-      <section className="section bg-slate-50 dark:bg-slate-800/40">
+      <section className="section bg-slate-50 dark:bg-secondary/40">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">
             Why Choose Us
           </motion.h2>
 
@@ -208,9 +210,9 @@ export default function About() {
                   className="card relative overflow-hidden group h-full"
                 >
                   <div className="text-3xl">{i.icon}</div>
-                  <h3 className="text-xl font-bold text-indigo-600 mt-2">{i.title}</h3>
+                  <h3 className="text-xl font-bold text-primary mt-2">{i.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed">{i.text}</p>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/10 group-hover:to-indigo-500/20 transition-colors" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/20 transition-colors" />
                 </motion.div>
               </motion.div>
             ))}
@@ -221,7 +223,7 @@ export default function About() {
       {/* ===== CERTIFICATIONS (image + text card view) ===== */}
       <section className="section">
         <div className="container-g">
-          <motion.h2 {...fadeIn} className="h2 text-center">
+          <motion.h2 {...fadeIn} className="h2 text-center text-primary">
             Certifications
           </motion.h2>
 
@@ -242,10 +244,10 @@ export default function About() {
                     <img src={c.img} alt={c.title} className="h-12 w-auto" />
                   </div>
                   <div className="mt-3">
-                    <h3 className="text-lg font-bold text-indigo-600">{c.title}</h3>
+                    <h3 className="text-lg font-bold text-primary">{c.title}</h3>
                     <p className="mt-1 text-sm">{c.text}</p>
                   </div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/10 group-hover:to-indigo-500/20 transition-colors" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/20 transition-colors" />
                 </motion.div>
               </motion.article>
             ))}

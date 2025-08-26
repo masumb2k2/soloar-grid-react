@@ -27,9 +27,16 @@ export default function Header() {
           {navItems.map(({to, label}) => (
             <NavLink key={to}
               to={to}
-              className={({isActive}) => 'px-3 py-2 rounded-lg font-semibold transition ' + (isActive ? 'bg-indigo-600 text-white' : 'hover:bg-slate-100 dark:hover:bg-slate-800')}
+              className={({isActive}) => 
+                'px-3 py-2 rounded-lg font-semibold transition ' + 
+                (isActive 
+                  ? 'bg-primary text-white' 
+                  : 'hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary') // Hover and active state
+              }
               onClick={() => setOpen(false)}
-            >{label}</NavLink>
+            >
+              {label}
+            </NavLink>
           ))}
           <DarkModeToggle />
         </nav>
@@ -56,9 +63,16 @@ export default function Header() {
               {navItems.map(({to, label}) => (
                 <NavLink key={to}
                   to={to}
-                  className={({isActive}) => 'px-3 py-2 rounded-lg font-semibold ' + (isActive ? 'bg-indigo-600 text-white' : 'hover:bg-slate-100 dark:hover:bg-slate-800')}
+                  className={({isActive}) => 
+                    'px-3 py-2 rounded-lg font-semibold ' + 
+                    (isActive 
+                      ? 'bg-primary text-white' 
+                      : 'hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary') // Hover and active state
+                  }
                   onClick={() => setOpen(false)}
-                >{label}</NavLink>
+                >
+                  {label}
+                </NavLink>
               ))}
             </div>
           </motion.aside>
